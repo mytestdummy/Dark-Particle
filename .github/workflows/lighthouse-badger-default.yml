@@ -14,17 +14,17 @@ name: 'Lighthouse-Badger-Default'
 
 # INPUTS as environmental variables (env) for not manually triggered workflows 
 env:
-  URLS: 'https://mythemeway.github.io/Dark-Particle/ https://mythemeway.github.io/Dark-Particle/projects/2020/10/31/project-1.html' # URL(s) to be checked e.g. 'https://github.com/sitdisch https://github.com/mythemeway'
+  URLS: 'https://mythemeway.github.io/Light-Particle/ https://mythemeway.github.io/Light-Particle/projects/2020/10/31/project-1.html' # URL(s) to be checked e.g. 'https://github.com/sitdisch https://github.com/mythemeway'
   TOKEN_NAME: 'SITDISCH_REPO_TOKEN' # target token name; insert only the name never the real value e.g. 'LIGHTHOUSE_BADGER_TOKEN'
   # If any of the following env is blank, a default value is used instead
   REPO_BRANCH: 'sitdisch/cloud master' # target repository & branch e.g. 'dummy/mytargetrepo master'
-  BADGES_ARGS: '-b pagespeed -o lighthouse_results/dark_particle -r' # badge-style '-b {flat,...}', preceding-label '-l "Lighthouse "', output-path '-o lighthouse_results/dummy', save-report '-r', single-badge '-s'
+  BADGES_ARGS: '-b pagespeed -o lighthouse_results/light_particle -r' # badge-style '-b {flat,...}', preceding-label '-l "Lighthouse "', output-path '-o lighthouse_results/dummy', save-report '-r', single-badge '-s'
   AUDIT_TYPE: # 'mobile', 'desktop', 'both' or 'both_p' 
   MOBILE_LIGHTHOUSE_PARAMS: # Lighthouse parameters mobile audit
   DESKTOP_LIGHTHOUSE_PARAMS: # Lighthouse parameters desktop audit
   USER_NAME: # user who should commit e.g. 'dummy'
   USER_EMAIL: # e.g. 'dummy@gmail.com'
-  COMMIT_MESSAGE: 'Lighthouse-Badger[bot]: Results Refreshed | Dark-Particle' # e.g. 'Lighthouse results added'
+  COMMIT_MESSAGE: 'Lighthouse-Badger[bot]: Results Refreshed | Light-Particle' # e.g. 'Lighthouse results added'
   # 
   # THAT'S IT; JUMP TO THE TRIGGERS;
   DEFAULT_REPO_BRANCH: '${{ github.repository }} master' # repo with this file and master branch
@@ -48,7 +48,7 @@ on:
       urls:
         description: 'URL(s) to be checked'
         required: true
-        default: 'https://mythemeway.github.io/Dark-Particle/ https://mythemeway.github.io/Dark-Particle/projects/2020/10/31/project-1.html'
+        default: 'https://mythemeway.github.io/Light-Particle/ https://mythemeway.github.io/Light-Particle/projects/2020/10/31/project-1.html'
       token_name:
         description: 'Target token name (NO VALUE!)'
         required: true
@@ -60,7 +60,7 @@ on:
       badges_args:
         description: 'Badges arguments: -b, -l, -o, -r, -s'
         required: true
-        default: '-b pagespeed -o lighthouse_results/dark_particle -r'
+        default: '-b pagespeed -o lighthouse_results/light_particle -r'
       audit_type:
         description: 'Audit type: mobile, desktop, both or both_p'
         required: true
@@ -84,7 +84,7 @@ on:
       commit_message:
         description: 'Commit message'
         required: true
-        default: 'Lighthouse-Badger[bot]: Results Refreshed | Dark-Particle'
+        default: 'Lighthouse-Badger[bot]: Results Refreshed | Light-Particle'
 
 ########################################################################
 # THAT'S IT; YOU DON'T HAVE TO DEFINE ANYTHING IN THE FOLLOWING

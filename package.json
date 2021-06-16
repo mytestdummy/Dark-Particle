@@ -1,11 +1,11 @@
 {
-  "name": "Dark-Particle",
+  "name": "Light-Particle",
   "author": "Sitdisch",
   "version": "2.0.0",
-  "description": "Package of Dark-Particle",
+  "description": "Package of Light-Particle",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mythemeway/dark-particle"
+    "url": "https://github.com/mythemeway/light-particle"
   },
   "license": "MIT",
   "scripts": {
